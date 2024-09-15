@@ -1,8 +1,23 @@
 import "./styles.css";
-// import HomePage from './home.js';
-import MenuPage from './menu.js';
+import { homeContainer } from './home.js';
+import { menuContainer } from './menu.js';
 
-const navButtons = document.querySelectorAll('button');
-navButtons.addEventListener('click', () => {
-    
-})
+const content = document.getElementById('content');
+content.appendChild(homeContainer);
+
+const navButtons = document.querySelectorAll('.nav-link-btn');
+navButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        content.innerHTML = "";
+        switch (btn.id) {
+            case "home":
+                content.appendChild(homeContainer);
+                break;
+            case "menu":
+                content.appendChild(menuContainer);
+                break;
+            default:
+                break;
+        }
+    })      
+});

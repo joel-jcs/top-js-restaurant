@@ -1,7 +1,5 @@
 const MenuPage = (() => {
-    const content = document.getElementById('content');
-
-    let menuContainer = document.createElement('div');
+    const menuContainer = document.createElement('div');
     menuContainer.id = "menu-container";
 
     const itemTitles = [
@@ -20,7 +18,6 @@ const MenuPage = (() => {
         "Try out our fruity delight that'll bring back memories to your last island adventure.",
         "This no-bake lemon curd layered dessert is perfect for the vegans out there.",
     ];
-
     const itemImages = [
         "https://prettysweetblog.com/wp-content/uploads/2021/01/No-bake-chocolate-hazelnut-dessert-in-a-glass-4.jpg",
         "https://www.jocooks.com/wp-content/uploads/2018/11/sex-in-a-pan-1-28.jpg",
@@ -62,9 +59,9 @@ const MenuPage = (() => {
         orderItemBtn.textContent = "Order Now";
     }
     
-    content.appendChild(menuContainer);
-
-    return content;
+    
+    return { menuContainer };
 })();
 
-export default content;
+const { menuContainer } = MenuPage;
+export { menuContainer };
