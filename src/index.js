@@ -1,6 +1,7 @@
 import "./styles.css";
 import { homeContainer } from './home.js';
 import { menuContainer } from './menu.js';
+import { orderContainer } from './orderPage.js';
 
 const content = document.getElementById('content');
 content.appendChild(homeContainer);
@@ -15,6 +16,9 @@ navButtons.forEach(btn => {
                 break;
             case "menu":
                 content.appendChild(menuContainer);
+                break;
+            case "order":
+                content.appendChild(orderContainer);
                 break;
             default:
                 break;

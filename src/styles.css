@@ -44,9 +44,8 @@ nav {
 }
 
 .nav-link-btn:hover {
-    opacity:0.8;
-    color:blue;
-}
+    opacity:0.6;
+}   
 
 button {
     cursor: pointer;
@@ -74,7 +73,7 @@ footer {
     text-align: center;
     width: 100%;
     height:100vh;
-    margin-top:60px;
+    /* margin-top:60px; */
     gap:20px;
     background-color: var(--content-bg);
 }
@@ -188,4 +187,39 @@ footer {
         rgb(59, 80, 185) 100%);
         color:white;
         
+}
+
+#order-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height:100vh;
+    gap:20px;
+}
+
+#order-heading {
+    font-size: 2.2rem;
+}
+
+#order-text {
+    font-size:1.2rem;
+    font-style: italic;
+}
+
+#order-location {
+    font-size:1.2rem;
+    width: 50%;
+}
+
+#order-location em {
+    font-weight: bold;
+    font-size:1.3rem;
+}
+
+#order-location strong {
+    font-weight: bold;
+    font-size:1.3rem;
 }
